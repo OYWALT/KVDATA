@@ -11,10 +11,11 @@ Linux + ubuntu
 # A Quick Start
 * step1:分别在分别在ubuntu中开辟三个终端，运行如下代码：
 
-`<gcc *.c -o go
+`<gcc *.c -o go>`
 
-./go port>` 
-//此处主从服务器的端口不能一样，客户端运行时port应对应其连接的服务器
+`<./go port>` 
+
+此处主从服务器的端口不能一样，客户端运行时port应对应其连接的服务器
 
 * step2:在客户端中输入命令来对服务器进行数据存取等操作。
 
