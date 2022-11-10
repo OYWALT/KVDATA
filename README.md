@@ -6,7 +6,7 @@
 KVDATA主要包含主服务器(KVdata_Master)、从服务器(KVdata_Slave)、客户端(KVdata_Client)三个文件夹。对于想深入研究并调试KVDATA代码的同学，应主要下载这三个文件中的代码。
 主要命令如下示：
 
-`<struct KVDataCommand KVDATACommandTable[] = {
+`<struct KVDataCommand KVDATACommandTable[] = {>`
 
     {"set",setCommand,3,3}, //SET KEY VALUE
     
@@ -34,7 +34,7 @@ KVDATA主要包含主服务器(KVdata_Master)、从服务器(KVdata_Slave)、客
     
     {"ping",pingCommand,1,4}//PING
     
-};>`
+`<};>`
 
 # 运行环境
 Linux + ubuntu
