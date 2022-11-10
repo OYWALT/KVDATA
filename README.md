@@ -4,6 +4,22 @@
 
 # 文件结构
 KVDATA主要包含主服务器(KVdata_Master)、从服务器(KVdata_Slave)、客户端(KVdata_Client)三个文件夹。对于想深入研究并调试KVDATA代码的同学，应主要下载这三个文件中的代码。
+主要命令如下示：
+struct KVDataCommand KVDATACommandTable[] = {
+    {"set",setCommand,3,3}, //SET KEY VALUE
+    {"get",getCommand,2,3}, //GET KEY
+    {"tset",setCommand,5,4}, //TSET KEY VALUE [ss/ms] [expire]
+    {"multi",multiCommand,1,5},  //MULTI
+    {"exec",execCommand,1,4},    //EXEC
+    {"watch",watchCommand,1,5},  //WATCH KEY1
+    {"unwatchkeys",unwatchAllKeysCommand,1,11},//UNWATCHKEYS
+    {"discard",unwatchAllKeysCommand,1,7},//UNWATCHKEYS
+    {"save",saveCommand,1,4},//SAVE
+    {"load",loadCommand,1,4},//LOAD
+    {"slaveof",slaveofCommand,3,7},//SLAVEOF ip port
+    {"psync",syncCommand,3,5},//PSYNC runid offset
+    {"ping",pingCommand,1,4}//PING
+};
 
 # 运行环境
 Linux + ubuntu
